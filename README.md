@@ -1,10 +1,13 @@
-# Título del trabajo
+# Industria
 
-Descripción breve del proyecto a realizar (2-3 frases).
+Proyecto para calcular el consumo de energía eléctrica de una industria así como el ahorro de cada mes y el coste de la misma.
 
 ## Integrantes del equipo
 
-Nombres, apellidos, y usuario GitHub de los integrantes del equipo.
+
+Miguel Aspiroz de la calle @miguelaspirozcalle
+Nicolás Castro García  @nicoascastrogarcia
+Mónica Brotons García  @monicabrotons
 
 ## Objetivos del trabajo
 
