@@ -5,11 +5,11 @@ Proyecto para calcular el consumo de energía eléctrica de una industria así c
 ## Integrantes del equipo
 
 
-*Miguel Aspiroz de la calle @miguelaspirozcalle
-*Nicolás Castro García  @nicoascastrogarcia
-*Mónica Brotons García  @monicabrotonsg
+* Miguel Aspiroz de la calle @miguelaspirozcalle
+* Nicolás Castro García  @nicoascastrogarcia
+* Mónica Brotons García  @monicabrotonsg
 
 ## Objetivos del trabajo
 
-*Calcular el consumo energético
-*Calcular el ahorro enérgetico por el uso de energias renovables
+* Calcular el consumo energético
+* Calcular el ahorro enérgetico por el uso de energias renovables
