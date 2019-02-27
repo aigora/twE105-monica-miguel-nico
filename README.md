@@ -7,8 +7,9 @@ Proyecto para calcular el consumo de energía eléctrica de una industria así c
 
 Miguel Aspiroz de la calle @miguelaspirozcalle
 Nicolás Castro García  @nicoascastrogarcia
-Mónica Brotons García  @monicabrotons
+Mónica Brotons García  @monicabrotonsg
 
 ## Objetivos del trabajo
 
-Lista de los objetivos que se persiguen con el trabajo propuesto.
+Calcular el consumo energético
+Calcular el ahorro enérgetico por el uso de energias renovables
