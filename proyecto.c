@@ -5,7 +5,7 @@ int main()
 	char menu;
 	
 	do {
-		printf("Bienvenid@.\nPor favor, elige una opci�n:\n \
+		printf("Bienvenid@.\nPor favor, elige una opción:\n \
 		Consumo (c)\n \
 		Gasto (g)\n \
 		Ahorro (a)\n \
@@ -14,19 +14,22 @@ int main()
 		
 		switch (menu) {
 			case 'c':
+				//Calcula el consumo de maquinaria,iluminación y otros servicios
 				;
 				break;
 			case 'g':
+				//Muestra el gasto por dia, mes, o año de agua, energético y materias primas
 				;
 				break;
 			case 'a':
+				//Calcula el ahorro dependiendo de la eficiencia, las horas (valle, supervalle, punta) y energias renovables
 				;
 				break;
 			case 's':
-				printf("Gracias por participar.\n");
+				printf("Gracias por usar nuestrp software\n");
 				break;
 			default:
-				printf("Elige una opci�n v�lida, por favor.\n");
+				printf("Elige una opción válida, por favor.\n");
 				break;
 		}
 	}
