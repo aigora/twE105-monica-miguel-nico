@@ -26,7 +26,7 @@ int main()
 				;
 				break;
 			case 's':
-				printf("Gracias por usar nuestrp software\n");
+				printf("Gracias por usar nuestro software.\n");
 				break;
 			default:
 				printf("Elige una opción válida, por favor.\n");
