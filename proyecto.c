@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -32,8 +33,8 @@ int main()
 								float *precio;
 								printf("Introduzca cuantos tipos de maquina ha comprado:\n");
 								scanf("%i",&tip);
-								precio = malloc(sizeof(double)*(tip+1));
-								nmaq = malloc(sizeof(int) * (tip+1));
+								precio = malloc(sizeof(float)*tip);
+								nmaq = malloc(sizeof(int) *tip);
 								//Comprueba si malloc ha funcionado
 								if (precio == NULL) {
 								printf("Error: memoria no disponible.\n");
@@ -44,23 +45,19 @@ int main()
 								exit(-1);
 								}
 								printf("Introduce el precio por maquina\n");
-								for (i=0;i<=tip;i++)
+								for (i=0;i<tip;i++)
 								{
-									scanf("%f", precio[i+1]);
-									printf(" %.2f \t", *(precio + i));
-									free(precio);
+									scanf("%f", &precio[i]);
 								}
-								printf("Introduce el numero de maquinas de cada tipo");
-								for (i=0;i<=tip;i++)
+								printf("Introduce el numero de maquinas de cada tipo\n");
+								for (i=0;i<tip;i++)
 								{
-									scanf("%i", nmaq[i+1]);
-									printf(" %i \t", *(nmaq + i));
-									free(nmaq);		
+									scanf("%i", &nmaq[i]);
 								}
-								for (i=0;i<=tip;i++)
-								{
 								printf("El coste en total por tipo de maquina es:\n");
-								printf("%.2f",nmaq[i]*precio[i]);
+								for (i=0;i<tip;i++)
+								{
+								printf("Tipo %i: %.2f\n",(i+1), nmaq[i]*precio[i]);
 								}
 								break;
 
@@ -74,7 +71,7 @@ int main()
 								printf("Introduce el numero de bombillas compradas:\n");
 								scanf("%i",&bomb);
 								pt=bomb*pb;
-								printf("El coste total es: %.2f", pt);
+								printf("El coste total es: %.2f\n", pt);
 							}
 							break;
 					}
