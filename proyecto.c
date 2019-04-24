@@ -81,6 +81,42 @@ int main()
 				break;
 			case 'g':
 				//Muestra el gasto por dia, mes, o aÃ±o de agua, energÃ©tico y materias primas
+				char periodo, infoagua, s;
+				int duracion;
+				float agua, energia, matprim;
+				float aguah, energiah, matprimh;
+				float costea, costee, costemp;
+				printf("Elige si prefieres conocer el gasto de un dia (d), un mes (m) o un anno (a)\n");
+				scanf("%c", &periodo);
+				switch (periodo) {
+					case 'd':
+						duracion = 24; //horas en un dia
+						printf("El precio del agua en la Comunidad de Madrid es de 1,55€/m3.\n");
+						printf("Deseas conocer más informacion sobre el consumo de agua? (s/n)\n");
+						scanf("%c", &infoagua);
+						if (infoagua = s) {
+							printf("El consumo medio de agua en la industria nacional es de unos 15 m3/hora,\
+							pero estos datos varian considerablemente segun el tipo. Por ejemplo, mientras que\
+							en la industria quimica la cifra llega a los 390, en la de la madera y el corcho \
+							es de apena 1,3. (Fuente: INE)\n");
+						}
+						printf("Introduce los metros cubicos de agua consumidos por hora.\n");
+						scanf("%f", &aguah);
+						agua = aguah * 24;
+						costea = agua * 1.55;
+						printf("El consumo diario de agua es de %.2f metros cubicos.\n\
+						El gasto diario en agua es de %.2f €.\n", agua, costea);
+						break;
+					case 'm':
+						duracion = 720; //horas en un mes
+						break;
+					case 'a':
+						duracion = 8760; //horas en un año
+						break;
+					default:
+						printf("Elige una opción válida, por favor.\n");
+						break;
+				}
 				;
 				break;
 			case 'a':
