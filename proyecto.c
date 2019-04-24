@@ -11,7 +11,7 @@ int main()
 		Gasto (g)\n \
 		Ahorro (a)\n \
 		Salir (s)\n");
-		scanf("%c", &menu);
+		scanf(" %c", &menu);
 		
 		switch (menu) {
 			case 'c':
@@ -24,7 +24,7 @@ int main()
 					printf("Consumo de maquinaria (m)\n");
 					printf("Consumo de iluminacion (i)\n");
 					printf("Salir (s)\n");
-					scanf("%c",&cons);
+					scanf(" %c",&cons);
 					switch (cons)
 					{
 						case 'm':
@@ -32,7 +32,7 @@ int main()
 								int tip, i, *nmaq;
 								float *precio;
 								printf("Introduzca cuantos tipos de maquina ha comprado:\n");
-								scanf("%i",&tip);
+								scanf("%i",&tip); //Da la dimension de los vectores
 								precio = malloc(sizeof(float)*tip);
 								nmaq = malloc(sizeof(int) *tip);
 								//Comprueba si malloc ha funcionado
@@ -55,15 +55,12 @@ int main()
 									scanf("%i", &nmaq[i]);
 								}
 								printf("El coste en total por tipo de maquina es:\n");
-								for (i=0;i<tip;i++)
+								for (i=0;i<tip;i++) //Calcula el precio total
 								{
 								printf("Tipo %i: %.2f\n",(i+1), nmaq[i]*precio[i]);
 								}
 								break;
-
-
 							}
-							break;
 						case 'i':
 							{
 								int bomb;
@@ -76,7 +73,7 @@ int main()
 							break;
 					}
 					
-				}
+				} 
 				while (cons!= 's');
 					}
 
