@@ -68,7 +68,15 @@ int main()
 							}
 							break;
 						case 'i':
-							;
+							{
+								int bomb;
+								float pb=0.25,pt;
+								printf("Introduce el numero de bombillas compradas:\n");
+								scanf("%i",&bomb);
+								pt=bomb*pb;
+								printf("El coste total es: %.2f", pt);
+							}
+							break;
 					}
 					
 				}
@@ -89,7 +97,7 @@ int main()
 				printf("Gracias por usar nuestro software.\n");
 				break;
 			default:
-				printf("Elige una opción válida, por favor.\n");
+				printf("Elige una opcion valida, por favor.\n");
 				break;
 		}
 	}
