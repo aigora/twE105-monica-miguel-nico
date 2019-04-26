@@ -95,8 +95,8 @@ int main()
 						 {
 						char infoagua;
 						duracion = 24; //horas en un dia
-						printf("El precio del agua en la Comunidad de Madrid es de 1,55€/m3.\n");
-						printf("Deseas conocer más informacion sobre el consumo de agua? (s/n)\n");
+						printf("El precio del agua en la Comunidad de Madrid es de 1,55 eur/m3.\n");
+						printf("Deseas conocer mas informacion sobre el consumo de agua? (s/n)\n");
 						scanf(" %c", &infoagua);
 						switch(infoagua)
 						{
@@ -106,8 +106,7 @@ int main()
 							scanf("%f", &aguah);
 							agua = aguah * 24;
 							costea = agua * 1.55;
-							printf("El consumo diario de agua es de %.2f metros cubicos.\n\
-							El gasto diario en agua es de %.2f €.\n", agua, costea);;
+							printf("El consumo diario de agua es de %.2f metros cubicos.\nEl gasto diario en agua es de %.2f euros.\n", agua, costea);
 							}
 						break;
 						case 'n':
@@ -116,8 +115,7 @@ int main()
 						scanf("%f", &aguah);
 						agua = aguah * 24;
 						costea = agua * 1.55;
-						printf("El consumo diario de agua es de %.2f metros cubicos.\n\
-						El gasto diario en agua es de %.2f €.\n", agua, costea);
+						printf("El consumo diario de agua es de %.2f metros cubicos.\nEl gasto diario en agua es de %.2f euros.\n", agua, costea);
 					}
 					break;
 				}
