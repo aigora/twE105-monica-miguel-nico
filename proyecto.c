@@ -135,6 +135,65 @@ int main()
 				break;
 			case 'a':
 				//Calcula el ahorro dependiendo de la eficiencia, las horas (valle, supervalle, punta) y energias renovables
+				//AHORRO
+int main()
+{
+int hora;
+float consumo,A,B,C,D,ef,contotal;
+char eficiencia, opcion;
+printf ("Escribe la hora y la clase energetica(A,B,C,D)\n");
+scanf ("%i %c", &hora, &eficiencia );
+
+switch (eficiencia)
+	{	case 'A':
+		ef=0.35;
+		break;
+		
+		case 'B':
+		ef=0.6;
+		break;
+		
+		case 'C':
+		ef=0.83;
+		break;
+		
+		case 'D':
+		ef=1;
+		break;
+		
+		default:
+		printf ("No existe esa clase energetica\n");
+		break;	
+		}	
+
+if (hora>13 && hora<24) 
+{	printf ("Es una hora punta\n"); 
+	consumo=0.162;
+	printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo);  }	    
+
+else if ((hora>=0 && hora<=1) || (hora>7 && hora<13))
+{	printf("Es una hora valle\n");
+	consumo=0.093;
+ 	printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo);  }
+
+if (hora>1 && hora<7)
+{	printf ("Es una hora supervalle\n"); 
+	consumo=0.071;
+ 	printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo); }
+ 	
+contotal=ef*consumo;
+printf ("El consumo total, teniendo en cuenta la eficiencia es: %.4f", contotal);
+
+return 0;
+
+}
+
+float consumo(float dinh, float eficiencia)
+{
+	float consumo;
+	consumo=dinh*eficiencia;
+	return consumo;
+}
 				;
 				break;
 			case 's':
