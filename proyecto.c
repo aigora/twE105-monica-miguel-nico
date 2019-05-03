@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+float consumo(float dinh, float eficiencia);
 
 int main()
 {
@@ -117,6 +118,7 @@ int main()
 				            			break;
 								}
 								consumo_agua(duracion,aguah);
+								printf("%.2f\n",consumo_agua);
 								}
 								break;
 							case 'n':
@@ -137,6 +139,7 @@ int main()
 				            			break;
 									}
 									consumo_agua(duracion,aguah);
+									printf("%.2f\n",consumo_agua);
 								}
 								break;
 			    			}
@@ -150,93 +153,89 @@ int main()
 							break;
 					}			
 				}
-<<<<<<< HEAD
-			while(periodo != 's');
-=======
-			}
-			while(periodo!='s');
+				while(gasto!='s');	
+				}
+				
 				break;
 			case 'a':
 				//Calcula el ahorro dependiendo de la eficiencia, las horas (valle, supervalle, punta) y energias renovables
 				//AHORRO
-int main()
-{
-int hora;
-float consumo,A,B,C,D,ef,contotal;
-char eficiencia, opcion;
-printf ("Escribe la hora y la clase energetica(A,B,C,D)\n");
-scanf ("%i %c", &hora, &eficiencia );
+			{
+				int hora;
+				char eficiencia;
+				float consumo,ef,contotal;
+				printf("Introduce la clase energetica (A,B,C,D)\n");
+				scanf (" %c", &eficiencia);
+				switch (eficiencia)
+					{	case 'A':
+						ef=0.35;
+						break;
+						
+						case 'B':
+						ef=0.6;
+						break;
+						
+						case 'C':
+						ef=0.83;
+						break;
+						
+						case 'D':
+						ef=1;
+						break;
+						
+						default:
+						printf ("No existe esa clase energetica\n");
+						break;	
+						}	
+				printf ("Escribe la hora\n");
+				scanf (" %i", &hora);
+				
+				if (hora>13 && hora<24) 
+				{	printf ("Es una hora punta\n"); 
+					consumo=0.162;
+					printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo);  }	    
+				
+				else if ((hora>=0 && hora<=1) || (hora>7 && hora<13))
+				{	printf("Es una hora valle\n");
+					consumo=0.093;
+				 	printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo);  }
+				
+				if (hora>1 && hora<7)
+				{	printf ("Es una hora supervalle\n"); 
+					consumo=0.071;
+				 	printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo); }
+				 	
+				contotal=ef*consumo;
+				printf ("El consumo total, teniendo en cuenta la eficiencia es: %.4f\n", contotal);
+				
+			}
+				
+					
+					break;
+				case 's':
+					printf("Gracias por usar nuestro software.\n");
+					break;
+				default:
+					printf("Elige una opcion valida, por favor.\n");
+					break;
 
-switch (eficiencia)
-	{	case 'A':
-		ef=0.35;
-		break;
-		
-		case 'B':
-		ef=0.6;
-		break;
-		
-		case 'C':
-		ef=0.83;
-		break;
-		
-		case 'D':
-		ef=1;
-		break;
-		
-		default:
-		printf ("No existe esa clase energetica\n");
-		break;	
-		}	
-
-if (hora>13 && hora<24) 
-{	printf ("Es una hora punta\n"); 
-	consumo=0.162;
-	printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo);  }	    
-
-else if ((hora>=0 && hora<=1) || (hora>7 && hora<13))
-{	printf("Es una hora valle\n");
-	consumo=0.093;
- 	printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo);  }
-
-if (hora>1 && hora<7)
-{	printf ("Es una hora supervalle\n"); 
-	consumo=0.071;
- 	printf ("El consumo en euros por kilovatio hora es: %.3f kWh\n", consumo); }
- 	
-contotal=ef*consumo;
-printf ("El consumo total, teniendo en cuenta la eficiencia es: %.4f", contotal);
-
-return 0;
-
-}
-
-float consumo(float dinh, float eficiencia)
-{
-	float consumo;
-	consumo=dinh*eficiencia;
-	return consumo;
-}
-				;
-				break;
-			case 's':
-				printf("Gracias por usar nuestro software.\n");
-				break;
-			default:
-				printf("Elige una opcion valida, por favor.\n");
-				break;
->>>>>>> 926b9499d0fcaa0eaf9a1fe0188825c3cd9471ec
 		}
-	}
+	
 }
 	while (menu != 's');
-	
-  return 0;
 }
+	
+
 
 float consumo_agua(int duracion, float aguah) {
 	float agua, costea;
 	agua = aguah * duracion;
 	costea = agua * 1.55;
 	printf("El consumo de agua es de %.2f metros cubicos.\nEl gasto en agua es de %.2f euros.\n\n", agua, costea);
+}
+float consumo(float dinh, float eficiencia)
+{
+	float consumo;
+	consumo=dinh*eficiencia;
+	return consumo;
 }
