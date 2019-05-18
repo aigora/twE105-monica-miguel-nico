@@ -1,0 +1,21 @@
+Precios medios de la electricidad (en euros por MWh):
+	Enero: 57.63
+	Febrero: 49.67
+	Marzo: 51.98
+	Abril: 58.38
+	Mayo: 56.10
+	Junio: 62.93
+	Julio: -449695424.00
+	Agosto: 61.93
+	Septiembre: 57.85
+	Octubre: 55.59
+	Noviembre: 58.34
+	Diciembre: 57.66
+
+Precio medio anual:
+	58.05 eur/MWh
+
+
+Sabias que...?
+El 24 de febrero fue el dia con la electricidad mas barata (25,38eur); mas de la mitad se produjo con renovables.
+En cambio, el 19 de julio fue la mas cara (76,38eur); donde las renovables apenas llegaron a la cuarta parte.
