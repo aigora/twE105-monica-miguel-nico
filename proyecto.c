@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-float contotal(float consumo, float ef);
+
 
 int main()
 {
@@ -234,6 +234,7 @@ int main()
 				//Calcula el ahorro dependiendo de la eficiencia, las horas (valle, supervalle, punta) y energias renovables
 				//AHORRO
 			{
+				float contotal(float consumo, float ef);
 				int hora;
 				float consumo,A,B,C,D,ef,dinh,con;
 				char eficiencia;
