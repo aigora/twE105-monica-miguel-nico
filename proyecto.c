@@ -2,6 +2,11 @@
 #include <stdlib.h>
 
 
+typedef struct { // estructura para los paneles solares
+	float superficie;
+	float eficienciapv;
+} panel;
+
 int main()
 {
 	char menu;
@@ -247,6 +252,11 @@ int main()
 				char eficiencia;
 				printf ("Escribe la hora y la clase energetica(A,B,C,D):\nclase A muy alto nivel de eficiencia,\n clase B eficiencia entre el 55 y 75,\n clase C entre el 75 y el 90,\n clase D entre el 90 y el 100\n");
 				scanf ("%i %c", &hora, &eficiencia );
+				
+				char pv, periodo;
+				int efpv;
+				float potencia, precio, co2;
+				int duracion;
 
 				switch (eficiencia)
 				{	case 'A':
@@ -288,7 +298,40 @@ int main()
 					con=contotal(consumo,ef);
 					printf ("El consumo total, teniendo en cuenta la eficiencia es: %.4f", con);
 
-					return 0;
+					printf("\nQuieres instalar paneles solares para un mayor ahorro y un menor impacto medioambiental? (s/n)\n"); // posibilidad añadida de instalar paneles fotovoltaicos
+					scanf(" %c", &pv);
+					panel solar;
+					switch (pv) {
+						case 's':
+							printf("\nQue superficie de paneles (m2) quieres instalar?\n");
+							scanf("%f", &solar.superficie);
+							printf("\nElige la eficiencia en porcentaje (ten en cuenta que los paneles disponibles en el mercado no suelen pasar del 24 por ciento)\n");
+							scanf(" %i", &efpv);
+							solar.eficienciapv = efpv/100.0;
+							potencia = 1.7*solar.superficie*solar.eficienciapv; // potencia generada en KWh
+							precio = 340.0*potencia*(solar.eficienciapv/0.19); // coste en euros (a partir de una estimacion para el 19% de eficiencia)
+							co2 = (potencia*0.257)-(potencia*0.009); // co2 no emitido con respecto al uso de combustibles fosiles
+							printf("\nElige si prefieres conocer el resultado diario (d), mensual (m) o anual (a).\n"); // preguntamos por el periodo
+							scanf(" %c", &periodo);
+							switch (periodo) {
+										case 'd':
+											duracion = 24; //horas en un dia
+											printf("\nCon una inversion de %.2f euros:\nProduces %.2f KWh por dia.\nEvitas la emision de %.2f kilos de CO2 cada dia.\n\n", precio, potencia*duracion, co2*duracion);
+											break;
+										case 'm':
+											duracion = 720; //horas en un mes
+								            printf("\nCon una inversion de %.2f euros:\nProduces %.2f KWh por mes.\nEvitas la emision de %.2f kilos de CO2 cada mes.\n\n", precio, potencia*duracion, co2*duracion);
+								            break;
+							            case 'a':
+							            	duracion = 8760; //horas en un año
+								            printf("\nCon una inversion de %.2f euros:\nProduces %.2f KWh por anno.\nEvitas la emision de %.2f kilos de CO2 cada anno.\n\n", precio, potencia*duracion, co2*duracion);
+								            break;
+									}
+							break;
+						case 'n':
+							printf("\nGracias de todos modos.\n\n");
+							break;
+					}
 
 					}
 				
