@@ -5,7 +5,7 @@ Precios medios de la electricidad (en euros por MWh):
 	Abril: 58.38
 	Mayo: 56.10
 	Junio: 62.93
-	Julio: -449695424.00
+	Julio: 67.95
 	Agosto: 61.93
 	Septiembre: 57.85
 	Octubre: 55.59

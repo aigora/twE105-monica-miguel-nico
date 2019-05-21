@@ -245,7 +245,7 @@ int main()
 				int hora;
 				float consumo,A,B,C,D,ef,dinh,con;
 				char eficiencia;
-				printf ("Escribe la hora y la clase energetica(A,B,C,D)\n");
+				printf ("Escribe la hora y la clase energetica(A,B,C,D):\nclase A muy alto nivel de eficiencia,\n clase B eficiencia entre el 55 y 75,\n clase C entre el 75 y el 90,\n clase D entre el 90 y el 100\n");
 				scanf ("%i %c", &hora, &eficiencia );
 
 				switch (eficiencia)
