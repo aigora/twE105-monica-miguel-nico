@@ -7,7 +7,7 @@ int main()
 	char menu;
 	
 	do {
-		printf("Bienvenid@.\nPor favor, elige una opcion:\n \
+		printf("Bienvenid@ a nuestro software con el que podras hacer calculos sobre tu empresa.\nPor favor, elige una opcion:\n \
 		Consumo (c)\n \
 		Gasto (g)\n \
 		Ahorro (a)\n \
