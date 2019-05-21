@@ -28,10 +28,10 @@ int main()
 					scanf(" %c",&cons);
 					switch (cons)
 					{
-						case 'm':
+						case 'm': //Calcula el precio por tipos de maquinas
 							{
 								int tip, i, *nmaq;
-								float *precio;
+								float *precio, total=0.0;
 								printf("Introduzca cuantos tipos de maquina ha comprado:\n");
 								scanf("%i",&tip); //Da la dimension de los vectores
 								precio = malloc(sizeof(float)*tip);
@@ -60,14 +60,21 @@ int main()
 								{
 								printf("Tipo %i: %.2f\n",(i+1), nmaq[i]*precio[i]);
 								}
+								for(i=0;i<tip;i++)
+								{
+									total=total+nmaq[i]*precio[i];
+								}
+								printf("El precio total de las maquinas es: %.2f\n",total);
 								break;
 							}
-						case 'i':
+						case 'i': //Calcula el precio total por bombillas
 							{
 								int bomb;
-								float pb=0.25,pt;
+								float pb,pt;
 								printf("Introduce el numero de bombillas compradas:\n");
 								scanf("%i",&bomb);
+								printf("Introduce el precio por bombilla:\n");
+								scanf("%f",&pb);
 								pt=bomb*pb;
 								printf("El coste total es: %.2f\n", pt);
 							}
