@@ -1,6 +1,6 @@
 Este trabajo ha sido realizado por Mónica Brotons, Miguel Aspiroz y Nicolás Castro.
 El programa consiste en una aplicación que le sirve a una empresa calcular el gasto dependiendo de lo que seleccione.
-En el incio nos encontramos con un menú en el que podemos seleccionar consumo, gasto, ahorro y salir.
+En el inicio nos encontramos con un menú en el que podemos seleccionar consumo, gasto, ahorro y salir.
 CONSUMO:
 En consumo se puede calcular el consumo de maquinaria e iluminación.
 El consumo de maquinaria consiste en introducir cuantos tipos
