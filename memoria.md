@@ -18,3 +18,4 @@ AHORRO:
 En ahorro se puede calcular el ahorro dependiendo de la eficiencia y la hora.
 El programa te pregunta la hora y la clase de eficiencia. Depende de la hora que hayas introducido se ve si es una hora valle, supervalle... y dependiendo
 de eso y de la eficiencia el programa te calcula el ahorro y el consumo total por kilovatio por hora.
+Por último, se puede optar por instalar paneles fotovoltaicos, con el tamaño y eficiencia deseados. El programa devuelve el coste de la instalación, la potencia que genera y la reducción de emisiones de dióxido de carbono.
