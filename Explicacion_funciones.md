@@ -9,7 +9,7 @@ _Todos los datos usados en esta sección son reales, correspondientes al año 20
 
 También, la función `float contotal(float consumo, float ef)`, se utiliza para hacer el producto del dinero por hora y la pegatina de eficiencia de la maquinaria, ya que no es lo mismo que trabajen en horas punta o valle.
 La siguiente estructura:
-#`typedef struct {
+`typedef struct {
 	float superficie;
 	float eficienciapv;
 } panel;`
